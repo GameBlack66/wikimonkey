@@ -160,11 +160,6 @@ body {
 
         .toggle-btn {
             background-image: url("button.png");
-            border: 2px;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-			border-radius: 100px;
         }
 
         .logo {
