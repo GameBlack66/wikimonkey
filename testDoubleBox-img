@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello, World!</title>
+
+  <style>
+    .cadre-double {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.cadre-double img {
+  display: block;
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+}
+
+/* Première boîte décalée */
+.cadre-double::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #3b82f6;
+  transform: translate(14px, 14px);
+  z-index: 0;
+}
+
+/* Deuxième boîte décalée */
+.cadre-double::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #111827;
+  transform: translate(-10px, -10px);
+  z-index: 0;
+}
+  </style>
+</head>
+
+<body>
+
+  <h1>Hello World!</h1>
+
+  <div class="cadre-double">
+  <img
+    src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg"
+    alt="Description de l'image"
+    width="400"
+  ></div>
+
+  
+
+</body>
+</html>
