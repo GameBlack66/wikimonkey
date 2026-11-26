@@ -30,6 +30,7 @@ function buttono() { window.location.href='oulann.html'; }
 function buttong() { window.location.href='gael.html'; }
 function buttonac() { window.location.href='index.html'; }
 function buttonn() { window.location.href='noel.html'; }
+function button3() { window.location.href='la3d.html'; }
 const icone = document.getElementById("mon-icone");
 icone.addEventListener("mouseover", () => {
   icone.animate(
