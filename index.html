@@ -2,7 +2,54 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' class='width=device-width, initial-scale=1.0'>
-     <title>Accueil - WikiMonkey © </title>
+     <title>Accueil - WikiMonkey © </title><style> .cadre-double {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+    }
+
+    .cadre-double img {
+      display: block;
+      position: relative;
+      z-index: 2;
+      width: 600px;
+      height: auto;
+    }
+
+    .cadre-double::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: #3b82f6;
+      transform: translate(14px, 14px);
+      z-index: 0;
+    }
+
+    .cadre-double::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 2px solid #111827;
+      transform: translate(-10px, -10px);
+      z-index: 0;
+    }
+
+    .ma-div {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .ma-div-inner {
+      display: inline-flex;
+      gap: 60px;
+      animation: defilement 20s linear infinite;
+    }
+
+    @keyframes defilement {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }</style>
 </head>
 <body>
     <link rel='stylesheet' href='style.css'></head><body><header><div class="header-left"><div id="mon-icone"><a class="toggle-btn" onclick="troisbarres()"><img src='lebutton-removebg-preview.png' width='50px'></a></div>
@@ -11,15 +58,36 @@
  <sidebar id="mySidebar"><button onclick="buttonac()">Accueil</button><button onclick="buttona()">Armand</button><button onclick="buttonl()">Lukas</button><button onclick="buttono()">Oulann</button>
  <button onclick="buttong()">Gael</button><button onclick="buttonn()">Noel</button><footer style="text-align: center; padding: 10px;"><p class="gold" style="font-size: 18px; font-weight: bold;">By Wikimonkey</p>
 </footer></sidebar><main id="mainContent"> <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br> <br> <br> <br>  <br> <br> 
-    <!--<h1> Accueil Singes </h1><br>
-    <p> site de Armand</p>
-    <a href='armand.html'>Site de Armand</a> <br>
-    <p> Site de Lukas</p>
-    <a href='lukas.html'>Site de Lukas</a>
-    <p> Site de Oulann</p>
-    <a href='oulann.html'>Site de Oulann</a>
-    <p> Site de Gaël</p>
-    <a href='gael.html'>Site de Gaël</a>-->
+  <div class="ma-div">
+    <div class="ma-div-inner">
+
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>
+
+    </div>
+  </div>
  
  
 </main>   </div><script src='script.js'></script> 
