@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>tg</title>
+  <style>
+    .cadre-double {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+    }
+
+    .cadre-double img {
+      display: block;
+      position: relative;
+      z-index: 2;
+      width: 600px;
+      height: auto;
+    }
+
+    .cadre-double::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: #3b82f6;
+      transform: translate(14px, 14px);
+      z-index: 0;
+    }
+
+    .cadre-double::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 2px solid #111827;
+      transform: translate(-10px, -10px);
+      z-index: 0;
+    }
+
+    .ma-div {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .ma-div-inner {
+      display: inline-flex;
+      gap: 60px;
+      animation: defilement 20s linear infinite;
+    }
+
+    @keyframes defilement {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hello World!</h1>
+
+  <div class="ma-div">
+    <div class="ma-div-inner">
+
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>&emsp;&emsp;&emsp;
+      <div class="cadre-double">
+        <img src="https://mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" alt="Image">
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>   
